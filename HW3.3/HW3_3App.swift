@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct HW3_3App: App {
+    private let user = StorageManager.shared.fetchUser()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartView()
+                .environmentObject(UserManager(user: user))
         }
     }
 }
