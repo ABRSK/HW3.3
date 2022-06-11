@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Codable {
+struct User {
     var name = ""
     var isRegistered = false
 }
