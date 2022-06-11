@@ -16,10 +16,12 @@ struct RegisterView: View {
             ZStack {
                 TextField("Enter your name...", text: $userManager.user.name)
                     .multilineTextAlignment(.center)
+                    .textFieldStyle(.roundedBorder)
                 HStack {
                     Spacer()
                     Text("\(userManager.user.name.count)")
                         .foregroundColor(userManager.user.name.count < 3 ? .red : .green)
+                        .padding(.trailing)
                 }
             }
             Button(action: registerUser) {
